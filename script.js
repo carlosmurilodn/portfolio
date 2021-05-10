@@ -10,7 +10,11 @@ document.querySelector("#layout-sim").addEventListener("change",atualizarPreco)
 document.querySelector("#layout-nao").addEventListener("change",atualizarPreco)
 document.querySelector("#prazo").addEventListener("change",function(){
     const prazo = document.querySelector("#prazo").value;
-    document.querySelector("label[for=prazo]").innerHTML=`Prazo: ${prazo} semana(s)`;
+    if (prazo==1) {
+        document.querySelector("label[for=prazo]").innerHTML=`Prazo: ${prazo} semana`;
+    } else {
+        document.querySelector("label[for=prazo]").innerHTML=`Prazo: ${prazo} semanas`;
+    }
     atualizarPreco()
 })
 
