@@ -4,6 +4,40 @@ hamburguer.addEventListener("click", function(){
     document.querySelector(".container").classList.toggle("show-menu");
 })
 
+var tela = document.querySelectorAll("header, section, footer");
+var t;
+for (let t = 0; t < tela.length; t++) {
+    tela[t].addEventListener("click", function(){
+        document.querySelector(".container").classList.remove("show-menu");
+    })    
+}
+
+
+/*var tela = document.querySelector("#conhecimentos");
+tela.addEventListener("click", function(){
+    document.querySelector(".container").classList.remove("show-menu");
+})
+
+var tela = document.querySelector("#projetos");
+tela.addEventListener("click", function(){
+    document.querySelector(".container").classList.remove("show-menu");
+})
+
+var tela = document.querySelector("#contato");
+tela.addEventListener("click", function(){
+    document.querySelector(".container").classList.remove("show-menu");
+})
+
+var tela = document.querySelector("#orcamento");
+tela.addEventListener("click", function(){
+    document.querySelector(".container").classList.remove("show-menu");
+})
+
+var tela = document.querySelector("footer");
+tela.addEventListener("click", function(){
+    document.querySelector(".container").classList.remove("show-menu");
+})*/
+
 document.querySelector("#qtde").addEventListener("change",atualizarPreco)
 document.querySelector("#js").addEventListener("change",atualizarPreco)
 document.querySelector("#layout-sim").addEventListener("change",atualizarPreco)
